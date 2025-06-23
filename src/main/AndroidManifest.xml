@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.zybooks.stevearevalo_warehouseapplication">
+
+    <!-- SMS permission -->
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <!-- Optional: Let the Play Store know telephony is not required -->
+    <uses-feature android:name="android.hardware.telephony" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.SteveArevalo_WarehouseApplication"
+        tools:targetApi="31">
+
+        <!-- Launcher Activity: Login screen -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true"
+            android:label="Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Inventory Dashboard Activity -->
+        <activity
+            android:name=".InventoryDashboardActivity"
+            android:exported="true"
+            android:label="Inventory Dashboard" />
+
+        <!-- SMS Notification Activity -->
+        <activity
+            android:name=".SmsNotificationActivity"
+            android:exported="true"
+            android:label="SMS Notifications" />
+
+        <!-- MainActivity (if used elsewhere in the app) -->
+        <activity
+            android:name=".mainActivity"
+            android:exported="true"
+            android:label="@string/app_name" />
+
+    </application>
+
+</manifest>
